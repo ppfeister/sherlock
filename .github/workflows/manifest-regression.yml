@@ -2,7 +2,7 @@ name: Remote Manifest Regression Check
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ testing/manifest-regression-check ]
     paths: [ sherlock/resources/** ]
 
 jobs:
