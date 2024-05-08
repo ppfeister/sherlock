@@ -152,6 +152,8 @@ class SitesInformation:
                 raise FileNotFoundError(f"Problem while attempting to access "
                                         f"data file '{data_file_path}'."
                                         )
+        
+        site_data.pop('$schema', None)
 
         self.sites = {}
 
@@ -172,6 +174,8 @@ class SitesInformation:
                 raise ValueError(
                     f"Problem parsing json contents at '{data_file_path}':  Missing attribute {error}."
                 )
+            except TypeError as error:
+                print(f"Encountered TypeError parsing json contents for target '{site_name}' at {data_file_path}\nSkipping target.\n")
 
         return
 
