@@ -353,8 +353,7 @@
     "username_claimed": "blue"
   },
   "CNET": {
-    "errorMsg": "null null - CNET",
-    "errorType": "message",
+    "errorType": "status_code",
     "regexCheck": "^[a-z].*$",
     "url": "https://www.cnet.com/profiles/{}/",
     "urlMain": "https://www.cnet.com/",
@@ -1299,6 +1298,7 @@
   "Linktree": {
     "errorMsg": "\"statusCode\":404",
     "errorType": "message",
+    "regexCheck": "^[\\w\\.]{2,30}$",
     "url": "https://linktr.ee/{}",
     "urlMain": "https://linktr.ee/",
     "username_claimed": "anne"

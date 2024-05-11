@@ -29,7 +29,7 @@ from colorama import init
 from argparse import ArgumentTypeError
 
 module_name = "Sherlock: Find Usernames Across Social Networks"
-__version__ = "0.14.3"
+__version__ = "0.14.4"
 
 
 class SherlockFuturesSession(FuturesSession):
@@ -423,7 +423,7 @@ def sherlock(
             # Type consistency, allowing for both singlets and lists in manifest
             if isinstance(error_codes, int):
                 error_codes = [error_codes]
-            
+
             if error_codes is not None and r.status_code in error_codes:
                 query_status = QueryStatus.AVAILABLE
             elif r.status_code >= 300 or r.status_code < 200:
@@ -575,7 +575,7 @@ def main():
         action="append",
         metavar="SITE_NAME",
         dest="site_list",
-        default=None,
+        default=[],
         help="Limit analysis to just the listed sites. Add multiple options to specify more than one site.",
     )
     parser.add_argument(
@@ -725,13 +725,13 @@ def main():
         sys.exit(1)
 
     if not args.nsfw:
-        sites.remove_nsfw_sites()
+        sites.remove_nsfw_sites(do_not_remove=args.site_list)
 
     # Create original dictionary from SitesInformation() object.
     # Eventually, the rest of the code will be updated to use the new object
     # directly, but this will glue the two pieces together.
     site_data_all = {site.name: site.information for site in sites}
-    if args.site_list is None:
+    if args.site_list == []:
         # Not desired to look at a sub-set of sites
         site_data = site_data_all
     else:
