@@ -5,7 +5,7 @@
 
 Name: python-%{pkg_norm_name}
 Version: %{sherlock_version}
-Release: 1%{sherlock_release}%{?dist}
+Release: 1%{?dist}
 Summary: Hunt down social media accounts by username across social networks
 Vendor: Sherlock Project
 Packager: Paul Pfeister <rh-bugzilla@pfeister.dev>
