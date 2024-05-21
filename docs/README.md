@@ -33,9 +33,9 @@
 
 | Method | Command | Notes |
 | - | - | - |
-| pypi | `pipx install sherlock-project` | `pip` may be used in place of `pipx` |
-| brew | `brew install sherlock` | Community supported |
-| docker | `docker pull sherlock/sherlock` | |
+| pypi | `pipx install sherlock-project` | Official |
+| brew | `brew install sherlock` | Homebrew-supported |
+| docker | `docker pull sherlock/sherlock` | Official |
 
 ### Alternative guides and methods
 
