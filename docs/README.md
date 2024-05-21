@@ -24,6 +24,10 @@
 
 ## Installation
 
+<a href="https://repology.org/project/sherlock-social-osint/versions">
+    <img src="https://repology.org/badge/vertical-allrepos/sherlock-social-osint.svg?header=Community Packages&exclude_unsupported=1" alt="Packaging status" align="right">
+</a>
+
 [![PyPI - Version](https://img.shields.io/pypi/v/sherlock-project?logo=PyPi&label=PyPI&color=darkgreen)][ext_pypi] [![Docker Image Version](https://img.shields.io/docker/v/sherlock/sherlock?sort=semver&logo=docker&label=Docker&color=darkgreen)][docs_docker] [![homebrew version](https://img.shields.io/homebrew/v/sherlock?logo=Homebrew&color=darkgreen)][ext_brew]
 
 
